@@ -32,11 +32,10 @@ function App() {
             <img
               src={`data:image/jpeg;base64,${game.game_img}`}
               alt={game.name}
-              className="card-image"
             />
-            <h2>{game.name}</h2>
-            <p>Цена: ${game.price}</p>
-            <p>Жанры: {game.genres.join(", ")}</p>
+            <p class="name">{game.name}</p>
+            <p class="price">${game.price}</p>
+            <p class="genres">{game.genres.join(", ")}</p>
           </div>
         ))}
       </div>

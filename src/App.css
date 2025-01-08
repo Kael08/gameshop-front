@@ -16,34 +16,65 @@ h1 {
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
   gap: 20px;
-  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #ddd;
+  width: 400px;
+  height: 450px;
+  background: purple;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  padding: 15px;
   text-align: left;
   transition: transform 0.2s;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .card:hover {
   transform: scale(1.03);
 }
 
-h2 {
-  font-size: 1.5rem;
-  margin: 10px 0;
+p {
+  font-family: 'Jersey 10',sans-serif;
+  color: white;
+  font-weight: bold;
+  margin:0;
+  font-style: Jersey 10;
 }
 
-p {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #555;
+.name {
+  font-size: 36px;
+}
+
+.price {
+  font-size:32px;
+}
+
+.genres {
+  font-size:28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'Jersey 10';
+  src: url('src/fonts/Jersey10.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
