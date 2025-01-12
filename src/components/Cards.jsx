@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "/src/styles/Cards.css";
 
 export default function Cards() {
+  const navigate = useNavigate()
+
+  const handleClick=() => {
+    navigate(`/Test`)
+  }
+
   const [games, setGames] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState(""); // Состояние для выбранного жанра
 
@@ -51,7 +58,9 @@ export default function Cards() {
       {/* Карточки игр */}
       <div className="card-container">
         {filteredGames.map((game) => (
-          <div key={game.id} className="card">
+          <div key={game.id} className="card" 
+          onClick={() => handleClick(game.id)} // Теперь обработчик на уровне карточки
+            style={{ cursor: "pointer" }}>
             <img
               src={`data:image/jpeg;base64,${game.game_img}`}
               alt={game.name}
