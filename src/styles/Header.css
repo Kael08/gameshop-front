@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Jersey 10';
+    src: url('src/fonts/Jersey10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .header {
+    font-family: 'Jersey 10',sans-serif;
+    background: purple;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+  }
+
+  .gameshop {
+    margin-left: 10px;
+    color: white;
+    font-size: 48px;
+    display:flex;
+    align-items: center;
+  }
+
+  .gameshop img {
+    margin-left:10px;
+    height: 40px;
+    width: auto;
+  }
+
+
+  .store {
+    text-decoration: underline;
+    color: white;
+    font-size:36px;
+    padding: 10px;
+  }
+
+  .community {
+    text-decoration: underline;
+    color: white;
+    font-size:36px;
+    padding: 10px;
+  }
+
+  .help{
+    text-decoration: underline;
+    color: white;
+    font-size:36px;
+    padding: 10px;
+  }
+
+  .about-us{
+    text-decoration: underline;
+    color: white;
+    font-size:36px;
+    padding: 10px;
+  }
+
+  .cart{
+    color: white;
+    font-size:36px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-left:95vh;
+  }
+
+  .cart img {
+    height: 40px;
+    width: auto;
+  }
+
+  .profile{
+    color: white;
+    font-size: 36px;
+    padding: 10px;
+    display:flex;
+    align-items: center;
+  }
+
+  .profile img {
+    height: 40px;
+    width: auto;
+  }
