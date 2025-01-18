@@ -66,3 +66,18 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  select {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: purple;
+    font-family: 'Jersey 10',sans-serif;
+    font-size: 28px;
+    outline: none;
+  }
+
+  select:hover {
+    border-color: purple;
+    box-shadow: 0 0 5px rgba(128, 0, 128, 0.5);
+  }

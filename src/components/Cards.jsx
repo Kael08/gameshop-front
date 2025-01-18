@@ -5,8 +5,8 @@ import "/src/styles/Cards.css";
 export default function Cards() {
   const navigate = useNavigate()
 
-  const handleClick=() => {
-    navigate(`/Test`)
+  const handleClick=(id) => {
+    navigate(`/gamePage`)
   }
 
   const [games, setGames] = useState([]);
@@ -45,9 +45,8 @@ export default function Cards() {
       <select
         value={selectedGenre}
         onChange={(e) => setSelectedGenre(e.target.value)}
-        className="genre-select"
       >
-        <option value="">Все жанры</option>
+        <option value="">All genres</option>
         {genres.map((genre) => (
           <option key={genre} value={genre}>
             {genre}

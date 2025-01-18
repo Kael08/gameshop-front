@@ -6,10 +6,9 @@ import Footer from '/src/components/Footer.jsx'
 
 function Store() {
   return (
-    <div>
+    <div className="page-container">
       <Header/>
       <div className="app">
-        <h1>Список игр</h1>
         <Cards games/>
       </div>
       <Footer/>
