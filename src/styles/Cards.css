@@ -81,3 +81,7 @@
     border-color: purple;
     box-shadow: 0 0 5px rgba(128, 0, 128, 0.5);
   }
+
+  select option {
+    background-color: rgb(148, 0, 148);
+  }

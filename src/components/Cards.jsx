@@ -6,11 +6,11 @@ export default function Cards() {
   const navigate = useNavigate()
 
   const handleClick=(id) => {
-    navigate(`/gamePage`)
+    navigate(`/gamePage/${id}`)
   }
 
-  const [games, setGames] = useState([]);
-  const [selectedGenre, setSelectedGenre] = useState(""); // Состояние для выбранного жанра
+  const [games, setGames] = useState([])
+  const [selectedGenre, setSelectedGenre] = useState("") // Состояние для выбранного жанра
 
   // Функция для загрузки данных
   const fetchGames = async () => {
