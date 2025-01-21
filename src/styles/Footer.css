@@ -1,18 +1,10 @@
 .footer {
     display:flex;
     background: purple;
-    height: 80px;
-    width:100%;
+    height: 10vh;
+    width:100vw;
     align-items: center;
     justify-content: center;
     color:white;
-    font-family: 'Jarsey 10',sans-serif;
 }
-
-@font-face {
-    font-family: 'Jersey 10';
-    src: url('src/fonts/Jersey10.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
 

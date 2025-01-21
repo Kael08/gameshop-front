@@ -1,0 +1,68 @@
+ .gamePage-container {
+    display: flex;
+    flex-direction: column;
+ }
+
+ .gamePage-ico {
+  display:flex;
+  justify-content: flex-start;
+ }
+
+ .gamePage-ico img {
+  height: 50vh;
+  width: auto;
+ }
+
+ .main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ }
+
+ .middle-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ }
+
+ .buy-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+ }
+
+ ._name {
+  color: purple;
+  font-size: 36px;
+  font-weight: bold;
+ }
+
+ ._developer {
+  color: purple;
+  font-size: 28px;
+  font-weight: bold;
+ }
+
+ ._genres {
+  color: purple;
+  font-size: 14px;
+  font-weight: bold;
+ }
+
+ ._description {
+  color: purple;
+  font-size: 28px;
+  font-weight: bold;
+ }
+
+ ._rating {
+  color: purple;
+  font-size: 24px;
+  font-weight: bold;
+ }
+
+ ._price {
+  color: purple;
+  font-size: 24px;
+  font-weight: bold;
+ }

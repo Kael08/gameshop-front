@@ -1,7 +1,7 @@
 import Header from "/src/components/Header.jsx"
 import Footer from "/src/components/Footer.jsx"
+import "/src/styles/GamePage.css";
 import "/src/styles/App.css"
-import "/src/styles/GamePage.module.css"
 import { useParams } from "react-router-dom"
 import { useEffect,useState } from "react"
 
@@ -32,27 +32,32 @@ export default function GamePage() {
     return <div>Загрузка...</div>
   }
 
-    return (
-      <div className={"pageContainer"}>
-        <Header />
-        <div className={"app"}>
-          <div className={"container"}>
-            <div className={"imgContainer"}>
-              <img
-                key={game.game_img}
-                src={`data:image/jpeg;base64,${game.game_img}`}
-                alt={game.name}
-              />
-            </div>
-            <div className={"gameInfo"}>
-              <p className={"gameName"}>{game.name}</p>
-              <p className={"gameDeveloper"}>Разработчик: {game.developer}</p>
-              <p className={"gameGenres"}>Жанры: {game.genres.join(", ")}</p>
-              <p className={"gameDescription"}>{game.description}</p>
-            </div>
+  return (
+    <div className="page-container">
+      <Header />
+      <main className="app">
+        <div className="gamePage-container">
+          <div className="gamePage-ico">
+            <img
+              src={`data:image/jpeg;base64,${game.game_img}`}
+              alt={game.name}/>
           </div>
+          <div className="main-info">
+            <p className="_name">{game.name}</p>
+            <p className="_developer">{game.developer}</p>
+            <p className="_genres">{game.genres.join(", ")}</p>
+            <p className="_rating"> Rating: {game.rating}</p>
+          </div>
+          <div className="middle-onfo">
+            <p className="_description">{game.description}</p>
+          </div>
+          <div className="buy-info"> 
+            <p className="_price">${game.price}</p>
+          </div>          
+          
         </div>
-        <Footer />
-      </div>
-    );
+      </main>
+      <Footer />
+    </div>
+  );
   }

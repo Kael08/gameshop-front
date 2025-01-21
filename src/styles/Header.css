@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Jersey 10';
-    src: url('src/fonts/Jersey10.ttf') format('truetype');
+    src: url('/src/fonts/Jersey10.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
@@ -10,60 +10,51 @@
     background: purple;
     display: flex;
     flex-direction: row;
-    height: 80px;
-    width: 100%;
+    height: 10vh;
+    width: 100vw;
+    justify-content: space-between;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap:1vw;
+  }
+
+  .right{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap:2vw;
   }
 
   .gameshop {
-    margin-left: 10px;
     color: white;
     font-size: 48px;
     display:flex;
     align-items: center;
+    margin-left: 10px;
   }
 
   .gameshop img {
-    margin-left:10px;
     height: 40px;
     width: auto;
   }
 
-
-  .store {
+  .store,.community,.help,.about-us {
     text-decoration: underline;
     color: white;
     font-size:36px;
-    padding: 10px;
-  }
-
-  .community {
-    text-decoration: underline;
-    color: white;
-    font-size:36px;
-    padding: 10px;
-  }
-
-  .help{
-    text-decoration: underline;
-    color: white;
-    font-size:36px;
-    padding: 10px;
-  }
-
-  .about-us{
-    text-decoration: underline;
-    color: white;
-    font-size:36px;
-    padding: 10px;
   }
 
   .cart{
     color: white;
     font-size:36px;
-    padding: 10px;
     display: flex;
     align-items: center;
-    margin-left:95vh;
   }
 
   .cart img {
@@ -74,9 +65,9 @@
   .profile{
     color: white;
     font-size: 36px;
-    padding: 10px;
     display:flex;
     align-items: center;
+    margin-right: 10px;
   }
 
   .profile img {
