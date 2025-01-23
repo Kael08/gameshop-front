@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Jersey 10';
+    src: url('src/fonts/Jersey10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.auth-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.auth {
+    width: 20vw;
+    height: 50vh;
+    border-radius: 10px;
+    background-color: purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    font-family: 'Jersey 10',sans-serif;
+}
+
+.auth-title{
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.auth-label{
+    color: white;
+    font-size:28px;
+    font-weight: bold;
+}
+
+.auth input {
+    color: gray;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+}
+
+.auth-label,.auth input,.signUp-label {
+    height: 5%;
+    width: 85%;
+    margin-bottom: 10px;
+}
+
+.auth button {
+    background-color: rgb(101, 0, 101);
+    font-size: 20px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth button:hover {
+    background-color: rgb(120, 0, 120); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); 
+}
+
+.signUp-label {
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+}

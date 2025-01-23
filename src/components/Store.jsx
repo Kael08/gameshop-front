@@ -8,9 +8,9 @@ function Store() {
   return (
     <div className="page-container">
       <Header/>
-      <div className="app">
-        <Cards games/>
-      </div>
+      <main className="app">
+        <Cards/>
+      </main>
       <Footer/>
     </div>
   );

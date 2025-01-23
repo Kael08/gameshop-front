@@ -11,6 +11,7 @@
  .gamePage-ico img {
   height: 50vh;
   width: auto;
+  object-fit: contain;
  }
 
  .main-info {

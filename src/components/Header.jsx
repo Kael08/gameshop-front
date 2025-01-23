@@ -9,6 +9,10 @@ const gameShopClick = () => {
     navigate(`/`)
 }
 
+const profileClick = () => {
+    navigate(`/profile`)
+}
+
     return (
         <header>
             <div className="header">
@@ -28,7 +32,9 @@ const gameShopClick = () => {
                     <div className="cart">
                         <img src="/src/assets/cart.png" alt="cart-ico"/>
                     </div>
-                    <div className="profile">
+                    <div className="profile"
+                    onClick={()=>profileClick()}
+                        style={{cursor:"pointer"}}>
                         <img src="/src/assets/profile.png" alt="profile-ico"/>
                     </div>
                 </div>
