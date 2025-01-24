@@ -11,7 +11,6 @@ function Profile() {
     const [userId,setUserId] = useState(null)
 
     useEffect(()=>{
-        localStorage.clear()
         const id = localStorage.getItem("userId")
         if(!id) {
             navigate(`/auth`)
@@ -20,12 +19,21 @@ function Profile() {
         }
     }, [navigate])
 
+    const signOutClick = () => {
+        localStorage.clear()
+        navigate('/')
+    }
+
     return (
         <div className="page-container">
             <Header/>
             <div className="app">
                 <h1>Профиль</h1>
-                <p>Ваш ID: {userId}</p>
+                <p style={{color:"black"}}>Ваш ID: {userId}</p>
+                <button style = {{color:"red"}} 
+                    onClick={()=>signOutClick()}>
+                        Sign Out
+                </button>
             </div>
             <Footer/>
         </div>

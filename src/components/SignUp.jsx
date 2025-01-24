@@ -13,18 +13,53 @@ function SignUp(){
     const authClick = () => {
         navigate('/auth')
     }
-    //<form className="signUp" onSubmit={handleSubmit}>
+
+    const handleSubmit = async(e)=>{
+        e.preventDefault()
+
+        if(!login.trim()||!password.trim()||!username.trim()){
+            setErrorMessage("All fields must be filled out!")
+            return
+        }
+
+        setErrorMessage("")
+
+        // Отправка запроса
+        try {
+            const response = await fetch("http://localhost:3000/sign-up", {
+                method:"POST",
+                headers:{ "Content-Type": "application/json"},
+                body:JSON.stringify({login,password,username})
+            })
+
+            if(!response.ok) {
+                const errorData = await response.json()
+                throw new Error(errorData.error || "SignUp failed")
+            }
+
+            const data = await response.json()
+
+            localStorage.setItem("userId",data.userInfoId)
+            navigate(`/profile`)
+        } catch(error){
+            console.error("Error:",error.message)
+            setErrorMessage(
+                error.message || "SignUp failed. Please try again."
+            )
+        }
+    }
+
     return (
         <div className="page-container">
             <main className="app">
                 <div className="signUp-container">
-                    <form className="signUp" >
+                    <form className="signUp" onSubmit={handleSubmit}>   
                         <p className="signUp-title">Sign Up</p>
-                        {/*errorMessage && (
+                        {errorMessage && (
                             <p style={{color: "red",fontSize:"16px"}}>
                                 {errorMessage}
                             </p>
-                        )*/}
+                        )}
                         <p className="signUp-label">Login</p>
                         <input type="text" id="login" name="login" placeholder="input login..." minLength="1" maxLength="100" required value={login} onChange={(e) => setLogin(e.target.value)} /*Обновление состояния login*/ />
                         <p className="signUp-label">Password</p>
