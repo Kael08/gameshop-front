@@ -1,5 +1,7 @@
 import React, {useEffect,useState} from "react"
 import { useNavigate } from "react-router-dom"
+import Header from '/src/components/Header.jsx'
+import Footer from '/src/components/Footer.jsx'
 import '/src/styles/App.css'
 import '/src/styles/Auth.css'
 
@@ -54,6 +56,7 @@ function Auth(){
 
     return (
         <div className="page-container">
+            <Header/>
             <main className="app">
                 <div className="auth-container">
                     <form className="auth" onSubmit={handleSubmit}>
@@ -75,6 +78,7 @@ function Auth(){
                     </form>
                 </div>
             </main>
+            <Footer/>
         </div>
     )
 }
