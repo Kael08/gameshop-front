@@ -71,7 +71,7 @@ export default function GamePage() {
                 <p className="_price">${game.price}</p>
               </div>          
               <div className="add-to-cart-container">
-                <button onClick={addToCart()}>
+                <button onClick={addToCart}>
                   Add to cart
                 </button>
               </div>
