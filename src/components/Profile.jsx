@@ -34,14 +34,15 @@ function Profile() {
     }, [userId,navigate])
 
     const signOutClick = () => {
-        localStorage.clear()
+        localStorage.setItem("gameList",null)
+        localStorage.setItem("userId","")
         navigate('/')
     }
 
     return (
         <div className="page-container">
             <Header/>
-            <div className="app">
+            <main className="app">
                 <div className="profile-container">
                     {user ? (
                         <>
@@ -65,7 +66,7 @@ function Profile() {
                         <p>Загрузка данных...</p>
                     )}
                 </div>
-            </div>
+            </main>
             <Footer/>
         </div>
     );

@@ -1,0 +1,28 @@
+.cart-container {
+    display: flex;
+    flex-direction:column;
+}
+
+._p_game_list {
+    font-size: 32px;
+    color: purple;
+    font-weight: bold;
+}
+
+.product {
+    background-color: gray;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+._p_product_id,._p_product_name,._p_product_price {
+    font-size: 32px;
+    color: purple;
+}
+
+
+
+
+

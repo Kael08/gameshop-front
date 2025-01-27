@@ -13,6 +13,10 @@ const profileClick = () => {
     navigate(`/profile`)
 }
 
+const cartClick = () => {
+    navigate(`/cart`)
+}
+
     return (
         <header>
             <div className="header">
@@ -29,7 +33,9 @@ const profileClick = () => {
                     <div className="about-us">ABOUT US</div>
                 </div>
                 <div className="right">
-                    <div className="cart">
+                    <div className="cart"
+                        onClick={()=>cartClick()}
+                        style={{cursor:"pointer"}}>
                         <img src="/src/assets/cart.png" alt="cart-ico"/>
                     </div>
                     <div className="profile"

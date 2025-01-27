@@ -6,6 +6,7 @@ import GamePage from "./components/GamePage.jsx";
 import Profile from "./components/Profile.jsx"
 import Auth from "./components/Auth.jsx"
 import SignUp from "./components/SignUp.jsx"
+import Cart from "./components/Cart.jsx"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/auth" element={<Auth/>}/>
       <Route path="/signUp" element={<SignUp/>}/>
+      <Route path="/cart" element={<Cart/>}/>
     </Routes>
   );
 }
