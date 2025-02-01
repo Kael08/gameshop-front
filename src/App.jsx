@@ -10,6 +10,7 @@ import Cart from "./components/Cart.jsx"
 
 
 function App() {
+  
   return (
     <Routes>
       <Route path="/" element={<Store/>} />

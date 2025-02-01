@@ -41,5 +41,23 @@
     box-shadow: 0px 6px 8px rgb(0, 0, 0);
   }
 
+.buy-button {
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 7vw;
+    height: auto;
+    border:none;
+    margin: 5px;
+}
+
+.buy-button:hover {
+    background-color: rgb(0, 109, 0);
+    box-shadow: 0px 6px 8px rgb(0, 0, 0);
+}
+
 
 

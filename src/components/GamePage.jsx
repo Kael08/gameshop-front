@@ -34,17 +34,19 @@ export default function GamePage() {
 
   const addToCart = () => {
     const storedGameList = localStorage.getItem("gameList")
-    let parsedGameList = []
-
-    if(storedGameList){
-      parsedGameList=JSON.parse(storedGameList)
+    let parsedGameList = storedGameList ? JSON.parse(storedGameList) : []
+  
+    if (!Array.isArray(parsedGameList)) {
+      parsedGameList = [] // Защита на случай, если данные в `localStorage` повреждены
     }
-
-    if(!parsedGameList.find(element =>element.id===game.id))
-      parsedGameList.push({ id: game.id,name:game.name,price:game.price})
-
-    localStorage.setItem("gameList",JSON.stringify(parsedGameList))
+  
+    if (!parsedGameList.find(element => element.id === game.game_id)) {
+      parsedGameList.push({ id: game.game_id, name: game.name, price: game.price })
+    }
+  
+    localStorage.setItem("gameList", JSON.stringify(parsedGameList))
   }
+  
 
   return (
     <div className="page-container">

@@ -57,8 +57,8 @@ export default function Cards() {
       {/* Карточки игр */}
       <div className="card-container">
         {filteredGames.map((game) => (
-          <div key={game.id} className="card" 
-          onClick={() => handleClick(game.id)} // Теперь обработчик на уровне карточки
+          <div key={game.game_id} className="card" 
+          onClick={() => handleClick(game.game_id)} // Теперь обработчик на уровне карточки
             style={{ cursor: "pointer" }}>
             <img
               src={`data:image/jpeg;base64,${game.game_img}`}
